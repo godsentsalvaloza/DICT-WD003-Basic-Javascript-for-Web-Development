@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Do-While Loop</title>
+  </head>
+  <body>
+    <p>Do-While Loop</p>
+    <p id="placeholder"></p>
+    <script>
+      let init = document.querySelector("#placeholder");
+      const cars = ["toyota", "mitsubishi", "hyundai", "honda"];
+      console.log(cars.length);
+      let x = 0;
+      do {
+        if (x === cars.length - 1) {
+          init.textContent += `${cars[x]}. `;
+        } else {
+          init.textContent += `${cars[x]}, `;
+        }
+        x++;
+      } while (x < cars.length);
+    </script>
+  </body>
+</html>

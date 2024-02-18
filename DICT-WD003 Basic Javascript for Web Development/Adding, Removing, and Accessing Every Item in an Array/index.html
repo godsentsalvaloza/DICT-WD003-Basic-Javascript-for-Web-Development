@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adding, Removing, and Accessing Every Item in an Array</title>
+  </head>
+  <body>
+    <h1>Open the developer tools' console</h1>
+    <script>
+      const city = ["Marikina", "Antipolo", "Pasig", "Manila"];
+      // Adding new value at the end - push
+      city.push("Mandaluyong");
+      // Adding multiple values
+      city.push("Taguig", "Makati");
+
+      // Adding item at the start - unshift
+      city.unshift("Caloocan");
+
+      // Remove last item - pop
+      city.pop();
+
+      // Remove first item - shift
+      city.shift();
+
+      // Iterate all value of an array
+      for (let cities of city) {
+        console.log(cities);
+      }
+
+      // Filter
+      function length(lng) {
+        return lng.length > 6;
+      }
+      const lengthCity = city.filter(length);
+      console.log(lengthCity);
+
+      // Map
+      const numbers = [1, 2, 3, 4, 5];
+      function double(num) {
+        return num * 2;
+      }
+      const doubleNumers = numbers.map(double);
+      console.log(doubleNumers);
+    </script>
+  </body>
+</html>

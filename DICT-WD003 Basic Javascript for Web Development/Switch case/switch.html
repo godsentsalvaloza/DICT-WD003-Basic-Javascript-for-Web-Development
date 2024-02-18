@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Switch Case</title>
+  </head>
+  <body>
+    <label for="weather">Select the weather type for today: </label>
+    <select name="" id="weather">
+      <option value="">-- Make a choice --</option>
+      <option value="sunny">Sunny</option>
+      <option value="rainy">Rainy</option>
+      <option value="snowing">Snowing</option>
+      <option value="overcast">Overcast</option>
+    </select>
+
+    <p></p>
+
+    <script>
+      const select = document.querySelector("select");
+      const para = document.querySelector("p");
+
+      select.addEventListener("change", setWeather);
+
+      function setWeather() {
+        switch (select.value) {
+          case "sunny":
+            para.textContent = `The weather is sunny.`;
+            break;
+
+          case "rainy":
+            para.textContent = `The weather is rainy.`;
+            break;
+
+          case "snowing":
+            para.textContent = `The weather is snowing.`;
+            break;
+
+          case "overcast":
+            para.textContent = `The weather is overcast.`;
+            break;
+
+          default:
+            para.textContent = ``;
+        }
+      }
+    </script>
+  </body>
+</html>

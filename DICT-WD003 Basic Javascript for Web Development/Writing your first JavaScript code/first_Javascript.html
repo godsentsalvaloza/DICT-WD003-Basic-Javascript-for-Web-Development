@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DICT - Javascript</title>
+    <style>
+      p {
+        font-family: Arial, Helvetica, sans-serif;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-align: center;
+        cursor: pointer;
+        display: inline-block;
+        padding: 3px 10px;
+        border-radius: 10px;
+        background-color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Player 1: Martin</p>
+
+    <script>
+      const para = document.querySelector("p");
+      para.addEventListener("click", updateName);
+
+      function updateName() {
+        const name = prompt("Enter a new name");
+        para.textContent = `Player 1: ${name}`;
+      }
+    </script>
+  </body>
+</html>
